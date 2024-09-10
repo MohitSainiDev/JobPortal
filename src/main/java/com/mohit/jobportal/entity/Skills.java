@@ -19,7 +19,7 @@ public class Skills {
 
 	private String name;
 
-	private String experinceLevel;
+	private String experienceLevel;
 
 	private String yearsOfExperience;
 
@@ -31,12 +31,12 @@ public class Skills {
 		super();
 	}
 
-	public Skills(int id, String name, String experinceLevel, String yearsOfExperience,
+	public Skills(int id, String name, String experienceLevel, String yearsOfExperience,
 			JobSeekerProfile jobSeekerProfile) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.experinceLevel = experinceLevel;
+		this.experienceLevel = experienceLevel;
 		this.yearsOfExperience = yearsOfExperience;
 		this.jobSeekerProfile = jobSeekerProfile;
 	}
@@ -57,12 +57,12 @@ public class Skills {
 		this.name = name;
 	}
 
-	public String getExperinceLevel() {
-		return experinceLevel;
+	public String getExperienceLevel() {
+		return experienceLevel;
 	}
 
-	public void setExperinceLevel(String experinceLevel) {
-		this.experinceLevel = experinceLevel;
+	public void setExperienceLevel(String experienceLevel) {
+		this.experienceLevel = experienceLevel;
 	}
 
 	public String getYearsOfExperience() {
@@ -83,7 +83,7 @@ public class Skills {
 
 	@Override
 	public String toString() {
-		return "Skills [id=" + id + ", name=" + name + ", experinceLevel=" + experinceLevel + ", yearsOfExperience="
+		return "Skills [id=" + id + ", name=" + name + ", experienceLevel=" + experienceLevel + ", yearsOfExperience="
 				+ yearsOfExperience + ", jobSeekerProfile=" + jobSeekerProfile + "]";
 	}
 

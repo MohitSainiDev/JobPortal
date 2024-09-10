@@ -71,7 +71,16 @@
             </li>
 
         </ul>
-        <label th:if="${user != null && user.firstName != null && user.lastName != null}"
+
+        <img
+                class="rounded-circle me-3"
+                height="50px"
+                width="50x"
+                th:if="${user.photosImagePath!=null}"
+                th:src="@{${user?.photosImagePath}}"
+        />
+
+        <label th:if="${user.firstName != null && user.lastName != null}"
                th:text="${user.firstName+' '+user.lastName}"
                class="nav-item nav-link px-2 me-3">
         </label>
@@ -97,7 +106,8 @@
                         th:href="@{/job-details-apply/{id}(id=${jobPost.jobPostId})}"
                         style="text-decoration: none; color: black"
                 >
-                     <div onclick="window.location.href='/job-details-apply/{id}(id=${jobPost.jobPostId})'"
+                    <div
+                            onclick="window.location=/job-details-apply/{id}(id=${jobPost.jobPostId})"
                             class="job-row"
                     >
                         <div class="row">
