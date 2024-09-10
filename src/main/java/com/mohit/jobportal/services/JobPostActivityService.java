@@ -1,7 +1,9 @@
 package com.mohit.jobportal.services;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.stereotype.Service;
 
@@ -49,8 +51,9 @@ public class JobPostActivityService {
         return jobPostActivityRepository.findAll();
     }
 
-//    public List<JobPostActivity> search(String job, String location, List<String> type, List<String> remote, LocalDate searchDate) {
-//        return Objects.isNull(searchDate) ? jobPostActivityRepository.searchWithoutDate(job, location, remote,type) :
-//                jobPostActivityRepository.search(job, location, remote, type, searchDate);
-//    }
+	public List<JobPostActivity> search(String job, String location, List<String> type, List<String> remote,
+			LocalDate searchDate) {
+		return Objects.isNull(searchDate) ? jobPostActivityRepository.searchWithoutDate(job, location, remote, type)
+				: jobPostActivityRepository.search(job, location, remote, type, searchDate);
+	}
 }
